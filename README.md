@@ -1,5 +1,6 @@
 ## Hi there 👋
-|<a href="https://github.com/Xinpeng021001"><img height="195" src="https://github-readme-stats-govin.vercel.app/api?username=Xinpeng021001&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&show=prs_merged_percentage" alt="Govin's github stats" /></a>|<a href="https://github.com/Xinpeng021001?tab=repositories"><img height="195" src="https://github-readme-stats-govin.vercel.app/api/top-langs/?username=Xinpeng021001&layout=compact&count_private=true&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0" alt="Govin's github stats" /></a>|<!--
+|<a href="https://github.com/Xinpeng021001"><img height="195" src="https://github-readme-stats-govin.vercel.app/api?username=Xinpeng021001&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&show=prs_merged_percentage" alt="Govin's github stats" /></a>|<a href="https://github.com/Xinpeng021001?tab=repositories"><img height="195" src="https://github-readme-stats-govin.vercel.app/api/top-langs/?username=Xinpeng021001&layout=compact&count_private=true&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0" alt="Govin's github stats" /></a>
+|<!--
 **Xinpeng021001/Xinpeng021001** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
