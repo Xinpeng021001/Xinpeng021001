@@ -7,3 +7,5 @@
 - 🌱 I’m currently learning LLM and related technologies.
 - 👯 I’m looking to collaborate on bioinformatics.
 
+
+[![GitHub Trends SVG](https://api.githubtrends.io/user/svg/Xinpeng021001/lang)](https://githubtrends.io)
