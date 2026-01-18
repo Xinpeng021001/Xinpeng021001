@@ -10,10 +10,10 @@
 
 <p align="left">
   <a href="https://github.com/Xinpeng021001">
-    <img height="180" src="https://github-readme-stats.vercel.app/api?username=Xinpeng021001&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=default" alt="Xinpeng021001's GitHub stats" />
+    <img height="180" src="./profile/stats-xinpeng021001.svg" alt="Xinpeng021001's GitHub stats" />
   </a>
   <a href="https://github.com/Xinpeng021001?tab=repositories">
-    <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Xinpeng021001&layout=compact&count_private=true&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0&theme=default" alt="Top languages" />
+    <img height="180" src="./profile/top-langs-xinpeng021001.svg" alt="Top languages" />
   </a>
 </p>
 
@@ -23,7 +23,7 @@
 
 <p align="left">
   <a href="https://github.com/bcb-unl">
-    <img height="180" src="https://github-readme-stats.vercel.app/api?username=bcb-unl&show_icons=true&hide_border=true&theme=default" alt="bcb-unl's stats" />
+    <img height="180" src="./profile/stats-bcb-unl.svg" alt="bcb-unl's stats" />
   </a>
 </p>
 

@@ -1,0 +1,52 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs once daily at midnight
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      # Generate personal stats card (Xinpeng021001)
+      - name: Generate personal stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=Xinpeng021001&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=default
+          path: profile/stats-xinpeng021001.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Generate personal top languages card (Xinpeng021001)
+      - name: Generate personal top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=Xinpeng021001&layout=compact&count_private=true&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0&theme=default
+          path: profile/top-langs-xinpeng021001.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Generate organization stats card (bcb-unl)
+      - name: Generate organization stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=bcb-unl&show_icons=true&hide_border=true&theme=default
+          path: profile/stats-bcb-unl.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Commit cards
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update README cards" || exit 0
+          git push
