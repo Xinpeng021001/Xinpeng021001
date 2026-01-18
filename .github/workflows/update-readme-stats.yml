@@ -33,13 +33,21 @@ jobs:
           path: profile/top-langs-xinpeng021001.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Generate organization stats card (bcb-unl)
-      - name: Generate organization stats card
+      # Generate pin cards for key organization repositories (bcb-unl)
+      - name: Generate pin card for run_dbcan
         uses: readme-tools/github-readme-stats-action@v1
         with:
-          card: stats
-          options: username=bcb-unl&show_icons=true&hide_border=true&theme=default
-          path: profile/stats-bcb-unl.svg
+          card: pin
+          options: username=bcb-unl&repo=run_dbcan
+          path: profile/pin-bcb-unl-run_dbcan.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for nf-core-dbcanmicrobiome
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=bcb-unl&repo=nf-core-dbcanmicrobiome
+          path: profile/pin-bcb-unl-nf-core-dbcanmicrobiome.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # Commit cards

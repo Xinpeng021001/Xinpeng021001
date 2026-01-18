@@ -22,8 +22,11 @@
 ### Project / Organization Impact (bcb-unl)
 
 <p align="left">
-  <a href="https://github.com/bcb-unl">
-    <img height="180" src="./profile/stats-bcb-unl.svg" alt="bcb-unl's stats" />
+  <a href="https://github.com/bcb-unl/run_dbcan">
+    <img height="180" src="./profile/pin-bcb-unl-run_dbcan.svg" alt="run_dbcan" />
+  </a>
+  <a href="https://github.com/bcb-unl/nf-core-dbcanmicrobiome">
+    <img height="180" src="./profile/pin-bcb-unl-nf-core-dbcanmicrobiome.svg" alt="nf-core-dbcanmicrobiome" />
   </a>
 </p>
 
