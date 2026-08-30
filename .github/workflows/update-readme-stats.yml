@@ -2,8 +2,8 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs once daily at midnight
-  workflow_dispatch: # Allows manual trigger
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,42 +15,32 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      # Generate personal stats card (Xinpeng021001)
+      # Personal stats: do not use count_private with GITHUB_TOKEN
+      # (that yields "Resource not accessible by integration").
       - name: Generate personal stats card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=Xinpeng021001&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=default
+          options: username=Xinpeng021001&show_icons=true&include_all_commits=true&hide_border=true&theme=default
           path: profile/stats-xinpeng021001.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
-      # Generate personal top languages card (Xinpeng021001)
       - name: Generate personal top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=Xinpeng021001&layout=compact&count_private=true&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0&theme=default
+          options: username=Xinpeng021001&layout=compact&hide_border=true&exclude_repo=github-readme-stats,jindouyunERP,Xinpeng021001.github.io,hexo-blog-7.0&theme=default
           path: profile/top-langs-xinpeng021001.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
-      # Generate pin cards for key organization repositories (bcb-unl)
-      - name: Generate pin card for run_dbcan
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=bcb-unl&repo=run_dbcan
-          path: profile/pin-bcb-unl-run_dbcan.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # github-readme-stats pin cards do not support organization repos.
+      - name: Generate organization repo pins
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/generate_repo_pins.py --outdir profile
 
-      - name: Generate pin card for nf-core-dbcanmicrobiome
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=bcb-unl&repo=nf-core-dbcanmicrobiome
-          path: profile/pin-bcb-unl-nf-core-dbcanmicrobiome.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      # Commit cards
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
